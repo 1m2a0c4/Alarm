@@ -3,7 +3,9 @@ package com.example.alarm
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView as TextView1
+
+import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.TextView as TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val buttonD = findViewById<Button>(R.id.D) as Button
         val buttonE = findViewById<Button>(R.id.E) as Button
 
-        var TextViewTV = findViewById<TextView1>(R.id.TV) as TextView1
+        var TextView = findViewById<TextView>(R.id.TV) as TextView
 
         //必要な変数を定義
         var flag = "null"
@@ -53,18 +55,21 @@ class MainActivity : AppCompatActivity() {
         //押された結果により処理分岐
        when(flag){
            "right" ->{
-                ctl = flag
+                TV.text = "→"
            }
            "left" ->{
-               ctl = flag
+               TV.text = "←"
            }
            "up" ->{
-               ctl = flag
+               TV.text = "↑"
            }
            "down" ->{
-
+               TV.text = "↓"
            }
            "end" ->{
+               TV.text = "おしまい"
+           }
+           "else" ->{
 
            }
        }
