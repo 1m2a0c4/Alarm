@@ -1,5 +1,6 @@
 package com.example.alarm
 
+import android.net.wifi.p2p.WifiP2pManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,6 +13,31 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //通信
+        //wifidirectの有効無効
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION.equals(action)) {
+
+                // UI update to indicate wifi p2p status.
+                String state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
+                if (state == WifiP2pManager.WIFI_P2P_STATE_ENABLED) {
+                    // Wifi Direct mode is enabled
+                    activity.setIsWifiP2pEnabled(true);
+                } else {
+                    activity.setIsWifiP2pEnabled(false);
+                    activity.resetData();
+
+                }
+                Log.d(WiFiDirectActivity.TAG, "P2P state changed - " + state);
+            }
+        //デバイス一覧を取得
+
+            // コネクション情報
+
+            //デバイス状態
+
 
         //ボタンを定義
         val buttonR = findViewById<Button>(R.id.R) as Button
