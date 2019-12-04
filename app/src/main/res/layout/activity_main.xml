@@ -13,8 +13,7 @@
         android:layout_height="50dp"
         android:text="Down"
         tools:layout_editor_absoluteX="519dp"
-        tools:layout_editor_absoluteY="341dp"
-        />
+        tools:layout_editor_absoluteY="320dp" />
 
     <Button
         android:id="@+id/R"
@@ -22,35 +21,35 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:text="Right"
-        tools:layout_editor_absoluteX="425dp"
-        tools:layout_editor_absoluteY="277dp" />
+        tools:layout_editor_absoluteX="619dp"
+        tools:layout_editor_absoluteY="270dp" />
+
 
     <Button
         android:id="@+id/L"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_alignTop="@+id/R"
         android:orientation="horizontal"
         android:text="Left"
-        tools:layout_editor_absoluteX="609dp"
-        android:layout_centerVertical="@+id/R" />
+        tools:layout_editor_absoluteX="419dp"
+        tools:layout_editor_absoluteY="270dp" />
 
     <Button
         android:id="@+id/U"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="UP"
-        tools:layout_editor_absoluteX="514dp"
-        tools:layout_editor_absoluteY="190dp" />
-
-
+        tools:layout_editor_absoluteX="519dp"
+        tools:layout_editor_absoluteY="220dp" />
 
     <Button
         android:id="@+id/E"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:text="End"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="304dp" />
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="320dp" />
 
     <TextView
         android:id="@+id/TV"
